@@ -1,0 +1,75 @@
+:root {
+    --primary-color: #3498db;
+  } 
+  @keyframes buttonClick {
+    0% {
+      background-color: blue;
+      transform: scale(1);
+    }
+    100% {
+      background-color: red;
+      transform: scale(1.2);
+    }
+  }
+  
+  button:active {
+    animation: buttonClick 0.5s ease forwards;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-color);
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container{
+    width: 30%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100px 2fr 100px;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-areas: 'header header header' 'menu main right' 'footer footer footer';
+  }
+  
+  .card{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .card1 {
+    background-color: #ff0000;
+    grid-area: header;
+  
+  }
+  .card2 {
+    background-color: #00ff1a;
+    grid-area: nav;
+    
+  }
+  .card3 {
+    background-color: #00ff84;
+    grid-area: main;
+  }
+  .card4 {
+    background-color: #004cff;
+  grid-area: right;
+  }
+  .card5 {
+    background-color: #9d00ff;
+    grid-area: footer;
+  }
+  
