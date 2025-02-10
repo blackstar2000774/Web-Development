@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #F2EFE7;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .background-image {
+      background-image: url('https://images.pexels.com/photos/1042423/pexels-photo-1042423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+    nav {
+      margin: 10px 0;
+    }
+    nav a {
+      color: black;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+    section {
+      padding: 20px;
+    }
+    .projects-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 2rem;
+      text-align: center;
+    }
+    .project {
+      background-color: #48A6A7;
+      border-radius: 10px;
+      border: 5px solid #2973B2;
+      padding: 1.5rem;
+      margin: 1rem;
+      width: 100%;
+      max-width: 30%;
+      transition: transform 0.2s, box-shadow 0.2s;
+      font-style: italic;
+      color: #333;
+    }
+    .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgb(11, 241, 241);
+    }
+    #projects h2 {
+      text-align: center;
+      font-size: 3rem;
+      color: white;
+      background-color: #2973B2;
+      padding: 10px;
+      border-radius: 10px;
+      text-shadow: 2px 2px 4px #000000;
+    }
+    footer {
+      background-color: #AFDDE5;
+      color: #024950;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+    .about img {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+      margin: 10px;
+    }
+    .about p, .about h3, .about ul {
+      margin: 10px;
+    }
+    .dark-mode {
+      background-color: #333;
+      color: #f2f2f2;
+    }
+    .dark-mode .navbar {
+      background-color: #555;
+    }
+    .dark-mode .project {
+      background-color: #444;
+      border: 5px solid #666;
+      color: #f2f2f2;
+    }
+    .navbar-toggler {
+      border: none;
+    }
+  </style>
+</head>
+<body class="background-image">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Samip Khadka</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../HTML_assignment/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../HTML_assignment/contact.html">Contact</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-light ml-3" id="toggle-dark-mode"> Dark/Light Mode</button>
+      </div>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+      <img src="239103672_4247665865329450_4301473505533725437_n.jpg" alt="Photo">
+      <div>
+        <p>Hello! I am a passionate web developer with a love for creating user-friendly applications. I enjoy coding and constantly strive to improve my skills.</p>
+        <h3>Skills and Interests:</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Continuous Learning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project">
+        <h3>Project One</h3>
+        <p>This project is a responsive website built with HTML, CSS, and JavaScript that showcases my skills.</p>
+        <a href="../Html_CSS/nav.html" target="_blank">View Project</a>
+      </div>
+
+      <div class="project">
+        <h3>Project Two</h3>
+        <p>A web application developed using React that helps users track their daily tasks.</p>
+        <a href="../todo-app/App.js" target="_blank">View Project</a>
+      </div>
+
+      <div class="project">
+        <h3>Project Three</h3>
+        <p>This project is a Node.js backend service that connects to a MongoDB database for data management.</p>
+        <a href="../todo-app/server.js" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mldglarv" method="POST">
+      <label for="Name">Name:</label><br>
+      <input type="text" name="name" placeholder="Enter your name"><br>
+      <label for="Email">Email:</label><br>
+      <input type="email" name="email" placeholder="Enter your email"><br>
+      <label for="Message">Message:</label><br>
+      <textarea name="message" rows="4" cols="30" placeholder="Write your message here"></textarea><br>
+      <button type="submit">Submit</button><br><br>
+    </form>
+  </section>
+
+  <footer>
+    <p>Follow me on social media:</p>
+    <a href="https://www.instagram.com/samip.khadka.12" style="color: rgb(89, 0, 255);">Instagram</a> | 
+    <a href="https://github.com/blackstar2000774" style="color: rgb(89, 0, 255);">GitHub</a>
+    <p>&copy; 2023 Samip Khadka. All rights reserved.</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById('toggle-dark-mode').addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
